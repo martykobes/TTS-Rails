@@ -1,0 +1,16 @@
+<body>
+<h1><center><em><span style="color: red"><span style="font-size:2em">Welcome to Marty's Adventures</span></span></em></center></h1>
+<br>
+<br>
+<br>
+<br>
+<container class="homeimg">
+<div class="pics" style="padding:25px">
+  <% @travel_pics.shuffle! %>
+  <% @travel_pics.each do |pic| %>
+  <%= image_tag pic, class: 'image_responsive', width: '200px', height: '250px' %>
+
+<% end %>
+</div>
+</container>
+</body>

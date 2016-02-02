@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<link rel="icon" href="http://apidock.com/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://apidock.com/images/favicon.ico" type="image/x-icon">
+
+  <link href="http://apidock.com/rails/notes.rss" rel="alternate" title="All recent notes in Ruby on Rails" type="application/rss+xml">
+  <link href="http://apidock.com/rails/notes/good.rss" rel="alternate" title="Recent good notes in Ruby on Rails" type="application/rss+xml">
+
+<link href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/main_site.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/application.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/syntax.css" media="screen" rel="stylesheet" type="text/css">
+<script src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/prototype.js" type="text/javascript"></script>
+<script src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/effects.js" type="text/javascript"></script>
+<script src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/controls.js" type="text/javascript"></script>
+<script src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/dragdrop.js" type="text/javascript"></script>
+
+<script src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/rails.js" type="text/javascript"></script>
+
+<script src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/search.js" type="text/javascript"></script>
+<title>mail_to (ActionView::Helpers::UrlHelper) - APIdock</title>
+    <link href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/documentation.css" media="screen" rel="stylesheet" type="text/css">
+  <script type="text/javascript" async="" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/ga.js"></script></head>
+  <body cz-shortcut-listen="true">
+    <div id="body2">
+      <div id="header">
+  <a href="http://apidock.com/" id="apidock_logo"><img alt="Apidock_header" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/apidock_header.png"></a>
+  <div id="apidock_nav">
+    <ul>
+  <li class="first_tab"><a href="http://apidock.com/">Welcome</a></li>
+  <li><a href="http://apidock.com/register">Register</a></li>
+  <li><a href="http://apidock.com/projects">Projects</a></li>
+  <li><a href="http://apidock.com/faq">Help</a></li>
+  <li><a href="http://apidock.com/about">About</a></li>
+  <li class="external"><a href="http://blog.nodeta.fi/category/apidock/">Blog</a></li>
+</ul>
+
+  </div>
+  
+  <div id="header_right" class="header_login">
+    <form action="http://apidock.com/login" method="post">
+      <a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to#" id="openid_header_link" onclick="Element.toggle(&quot;default_header_login&quot;);
+Element.toggle(&quot;openid_header_login&quot;);
+var openid_link = $(&#39;openid_header_link&#39;);
+if (openid_link.innerHTML == &#39;Use login / password&#39;) {
+openid_link.update(&#39;Use OpenID&#39;);
+$(&quot;login&quot;).activate();
+} else {
+openid_link.update(&#39;Use login / password&#39;);
+$(&quot;openid_url&quot;).activate();
+}; return false;">Use OpenID</a>
+      <span id="default_header_login">
+        <label for="login">Login</label>
+        <input id="login" name="login[login]" size="30" type="text">
+        <label for="password">Password</label>
+        <input id="password" name="login[password]" size="30" type="password">
+      </span>
+      <span id="openid_header_login" style="display:none;">
+        <label for="openid_url">OpenID URL</label>
+        <input id="openid_url" name="openid_url" type="text">
+      </span>
+      <label for="login_remember_me">Remember me</label><input name="login[remember_me]" type="hidden" value="0"><input id="login_remember_me" name="login[remember_me]" type="checkbox" value="1">
+      <input src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/submit_login.png" type="image"> 
+    </form>
+  </div>
+
+</div>
+<div id="navigation" style="background-color:#9F3B25;">
+  <ul>
+    <li class="first_tab" id="current"><a href="http://apidock.com/rails" onclick="
+          var value = $(&#39;nav_search_field&#39;).value;
+          if (fieldFocus == true &amp;&amp; value.length != 0) {
+            top.location = &#39;/rails?q=&#39; + value;
+          } else {
+            top.location = &#39;/rails&#39;;
+          }; return false;"><img alt="Rails_icon_16" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/rails_icon_16.png">Ruby on Rails</a></li>
+<li><a href="http://apidock.com/rspec" onclick="
+          var value = $(&#39;nav_search_field&#39;).value;
+          if (fieldFocus == true &amp;&amp; value.length != 0) {
+            top.location = &#39;/rspec?q=&#39; + value;
+          } else {
+            top.location = &#39;/rspec&#39;;
+          }; return false;"><img alt="Rspec_icon_16" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/rspec_icon_16.png">RSpec</a></li>
+<li><a href="http://apidock.com/ruby" onclick="
+          var value = $(&#39;nav_search_field&#39;).value;
+          if (fieldFocus == true &amp;&amp; value.length != 0) {
+            top.location = &#39;/ruby?q=&#39; + value;
+          } else {
+            top.location = &#39;/ruby&#39;;
+          }; return false;"><img alt="Ruby_icon_16" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/ruby_icon_16.png">Ruby</a></li>
+
+  </ul>
+
+  <div id="nav_search">
+    <form action="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html" method="post" onsubmit="return false;">
+      <input autocomplete="off" id="nav_search_field" name="nav_search_field" type="text">
+      <a class="img_link" href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to#" id="submit_nav_search" onclick="window.location.href = &#39;/rails/search?query=&#39; + escape($F(&#39;nav_search_field&#39;));; return false;"></a>
+    </form>
+  </div>
+</div>
+<ul id="search_results" style="display: none; top: 104px;">
+  <li></li>
+</ul>
+
+      <div id="content_wrapper">
+        <!-- @flowdock -->
+        <a id="flowdock-tab" title="The group chat tool for software developers from the guys behind APIdock" href="http://flowdock.com/tour/developers?source=apidock">Flowdock</a>
+        <!-- @flowdock -->
+        <div id="content" class="clearfix">
+          
+
+          <div id="docs_container">
+             
+<div id="docs_header">
+  <div id="title" class="clearfix">
+    <div id="title_prefix_method" class="title_prefix">
+      <span>method</span>
+    </div>
+    <div id="title_name">
+      <h1>mail_to</h1>
+    </div>
+    <img alt="Importance_4" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_4.png" title="Extensive documentation">
+  </div>
+  <div id="docs_info">
+
+      <strong>Ruby on Rails latest stable</strong> (v4.2.1)
+ - 
+    <a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to#" onclick="var notes = $(&#39;notes&#39;);
+scroll(0, notes.cumulativeOffset().top);; return false;">2 notes</a> - 
+    Class: <span><a href="http://apidock.com/rails/ActionView">ActionView</a></span><span>::<a href="http://apidock.com/rails/ActionView/Helpers">Helpers</a></span><span>::<a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper">UrlHelper</a></span>
+
+    <div id="timeline" class="clearfix">
+  <ul>
+    
+                      <li>
+        <a href="http://apidock.com/rails/v1.0.0/ActionView/Helpers/UrlHelper/mail_to" title="1.0.0"><span class="label">1.0.0</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v1.1.1/ActionView/Helpers/UrlHelper/mail_to" title="1.1.1"><span class="label">1.1.1</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v1.1.6/ActionView/Helpers/UrlHelper/mail_to" title="1.1.6"><span class="label">1.1.6</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li class="positive">
+        <a href="http://apidock.com/rails/v1.2.0/ActionView/Helpers/UrlHelper/mail_to" title="1.2.0"><span class="label">1.2.0</span>
+          <span class="diff" style="height:34%;">(34)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v1.2.6/ActionView/Helpers/UrlHelper/mail_to" title="1.2.6"><span class="label">1.2.6</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v2.0.0/ActionView/Helpers/UrlHelper/mail_to" title="2.0.0"><span class="label">2.0.0</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v2.0.3/ActionView/Helpers/UrlHelper/mail_to" title="2.0.3"><span class="label">2.0.3</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v2.1.0/ActionView/Helpers/UrlHelper/mail_to" title="2.1.0"><span class="label">2.1.0</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v2.2.1/ActionView/Helpers/UrlHelper/mail_to" title="2.2.1"><span class="label">2.2.1</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v2.3.2/ActionView/Helpers/UrlHelper/mail_to" title="2.3.2"><span class="label">2.3.2</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v2.3.8/ActionView/Helpers/UrlHelper/mail_to" title="2.3.8"><span class="label">2.3.8</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v3.0.0/ActionView/Helpers/UrlHelper/mail_to" title="3.0.0"><span class="label">3.0.0</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v3.0.5/ActionView/Helpers/UrlHelper/mail_to" title="3.0.5"><span class="label">3.0.5</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li class="negative">
+        <a href="http://apidock.com/rails/v3.0.9/ActionView/Helpers/UrlHelper/mail_to" title="3.0.9"><span class="label">3.0.9</span>
+          <span class="diff" style="height:4%;">(-4)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v3.1.0/ActionView/Helpers/UrlHelper/mail_to" title="3.1.0"><span class="label">3.1.0</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v3.2.1/ActionView/Helpers/UrlHelper/mail_to" title="3.2.1"><span class="label">3.2.1</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v3.2.3/ActionView/Helpers/UrlHelper/mail_to" title="3.2.3"><span class="label">3.2.3</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v3.2.8/ActionView/Helpers/UrlHelper/mail_to" title="3.2.8"><span class="label">3.2.8</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v3.2.13/ActionView/Helpers/UrlHelper/mail_to" title="3.2.13"><span class="label">3.2.13</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li class="negative">
+        <a href="http://apidock.com/rails/v4.0.2/ActionView/Helpers/UrlHelper/mail_to" title="4.0.2"><span class="label">4.0.2</span>
+          <span class="diff" style="height:38%;">(-38)</span></a>
+        
+            </li>   
+    
+                      <li>
+        <a href="http://apidock.com/rails/v4.1.8/ActionView/Helpers/UrlHelper/mail_to" title="4.1.8"><span class="label">4.1.8</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+                      <li class="current ">
+        <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/mail_to" title="4.2.1"><span class="label">4.2.1</span>
+          <span class="diff" style="height:0%;">(0)</span></a>
+        
+            </li>   
+    
+    <li id="help">
+      <a href="http://apidock.com/faq#What-is-the-bar-graph-on-the-top-of-documentation-pages" class="info">What's this?</a>
+    </li>
+  </ul>
+</div>
+
+
+  </div>
+</div>
+<div id="related">
+  <div id="related_title"><h3>Related methods</h3></div>
+  <ul>
+ 
+    
+
+  <li class="related_header">Instance methods (28)</li>
+  
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v3.0.9/ActionView/Helpers/UrlHelper/add_confirm_to_attributes%21">add_confirm_to_attributes!</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v3.0.9)</span>
+  
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v3.0.9/ActionView/Helpers/UrlHelper/add_disable_with_to_attributes%21">add_disable_with_to_attribu...</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v3.0.9)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/add_method_to_attributes%21">add_method_to_attributes!</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v3.2.13/ActionView/Helpers/UrlHelper/array_or_string_for_javascript">array_or_string_for_javascript</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v3.2.13)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/_back_url">_back_url</a>  		<img alt="Icon_protected_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_protected_sm.png" title="protected">
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_3_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_3_sm.png" title="Wide documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/button_to">button_to</a>  		
+    
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v2.3.8/ActionView/Helpers/UrlHelper/confirm_javascript_function">confirm_javascript_function</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v2.3.8)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/convert_boolean_attributes%21">convert_boolean_attributes!</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/convert_options_to_data_attributes">convert_options_to_data_att...</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v2.3.8/ActionView/Helpers/UrlHelper/convert_options_to_javascript%21">convert_options_to_javascript!</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v2.3.8)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_5_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_5_sm.png" title="Very extensive documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/current_page%3F">current_page?</a>  		
+    
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_1_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="http://apidock.com/rails/v1.2.6/ActionView/Helpers/UrlHelper/link_image_to">link_image_to</a>  		
+    
+    
+    <span class="info">(&lt;= v1.2.6)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_5_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_5_sm.png" title="Very extensive documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/link_to">link_to</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_5_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_5_sm.png" title="Very extensive documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/link_to_if">link_to_if</a>  		
+    
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_1_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="http://apidock.com/rails/v1.2.6/ActionView/Helpers/UrlHelper/link_to_image">link_to_image</a>  		
+    
+    
+    <span class="info">(&lt;= v1.2.6)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/link_to_remote_options%3F">link_to_remote_options?</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_2_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_2_sm.png" title="Moderate documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/link_to_unless">link_to_unless</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_3_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_3_sm.png" title="Wide documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/link_to_unless_current">link_to_unless_current</a>  		
+    
+    
+</li>
+
+<li>
+  <img alt="Importance_4_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_4_sm.png" title="Extensive documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/mail_to">mail_to</a>  		
+    
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v2.3.8/ActionView/Helpers/UrlHelper/method_javascript_function">method_javascript_function</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v2.3.8)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/method_tag">method_tag</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v3.2.13/ActionView/Helpers/UrlHelper/options_for_javascript">options_for_javascript</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v3.2.13)</span>
+  
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v2.3.8/ActionView/Helpers/UrlHelper/popup_javascript_function">popup_javascript_function</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v2.3.8)</span>
+  
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v1.1.6/ActionView/Helpers/UrlHelper/post_javascript_function">post_javascript_function</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+    <span class="info">(&lt;= v1.1.6)</span>
+  
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v3.2.13/ActionView/Helpers/UrlHelper/_routes_context">_routes_context</a>  		
+    
+    
+    <span class="info">(&lt;= v3.2.13)</span>
+  
+</li>
+
+<li>
+  <img alt="Importance_0_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_0_sm.png" title="No documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/token_tag">token_tag</a>  		
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png" title="private">
+    
+</li>
+
+<li>
+  <img alt="Importance_4_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_4_sm.png" title="Extensive documentation">  <a href="http://apidock.com/rails/v4.2.1/ActionView/Helpers/UrlHelper/url_for">url_for</a>  		
+    
+    
+</li>
+
+<li class="deprecated">
+  <img alt="Importance_1_sm" class="importance" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/importance_1_sm.png" title="Some documentation">  <a href="http://apidock.com/rails/v3.2.13/ActionView/Helpers/UrlHelper/url_options">url_options</a>  		
+    
+    
+    <span class="info">(&lt;= v3.2.13)</span>
+  
+</li>
+
+
+
+  </ul>
+  <p class="legend">
+    <img alt="Icon_private_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_private_sm.png"> = private<br>
+    <img alt="Icon_protected_sm" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/icon_protected_sm.png"> = protected
+  </p>
+</div>
+
+<div id="docs_body">
+  
+
+
+  <code><strong>mail_to</strong>(email_address, name = nil, html_options = {}, &amp;block)</code>
+  <em>public</em>
+  <div class="description">
+    
+    
+<p>Creates a mailto link tag to the specified <tt>email_address,</tt> which is
+also used as the name of the link unless <tt>name</tt> is specified.
+Additional <a href="http://apidock.com/rails/HTML">HTML</a> attributes for the link can be
+passed in <tt>html_options</tt>.</p>
+
+<p><tt><a href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html">mail_to</a></tt>
+has several methods for customizing the email itself by passing special
+keys to <tt>html_options</tt>.</p>
+
+<h4>Options</h4>
+<ul><li>
+<p><tt>:subject</tt> - Preset the subject line of the email.</p>
+</li><li>
+<p><tt>:body</tt> - Preset the body of the email.</p>
+</li><li>
+<p><tt>:cc</tt> - Carbon Copy additional recipients on the email.</p>
+</li><li>
+<p><tt>:bcc</tt> - Blind Carbon Copy additional recipients on the email.</p>
+</li></ul>
+
+<h4>Obfuscation</h4>
+
+<p>Prior to <a href="http://apidock.com/rails/Rails">Rails</a> 4.0, <tt><a href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html">mail_to</a></tt>
+provided options for encoding the address in order to hinder email
+harvesters.  To take advantage of these options, install the
+<tt>actionview-encoded_mail_to</tt> gem.</p>
+
+<h4>Examples</h4>
+
+<pre><span class="ident"><a href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html">mail_to</a></span> <span class="punct">"</span><span class="string">me@domain.com</span><span class="punct">"</span>
+<span class="comment"># =&gt; &lt;a href="mailto:me@domain.com"&gt;me@domain.com&lt;/a&gt;</span>
+
+<span class="ident"><a href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html">mail_to</a></span> <span class="punct">"</span><span class="string">me@domain.com</span><span class="punct">",</span> <span class="punct">"</span><span class="string">My email</span><span class="punct">"</span>
+<span class="comment"># =&gt; &lt;a href="mailto:me@domain.com"&gt;My email&lt;/a&gt;</span>
+
+<span class="ident"><a href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html">mail_to</a></span> <span class="punct">"</span><span class="string">me@domain.com</span><span class="punct">",</span> <span class="punct">"</span><span class="string">My email</span><span class="punct">",</span> <span class="ident">cc</span><span class="punct">:</span> <span class="punct">"</span><span class="string">ccaddress@domain.com</span><span class="punct">",</span>
+         <span class="ident">subject</span><span class="punct">:</span> <span class="punct">"</span><span class="string">This is an example email</span><span class="punct">"</span>
+<span class="comment"># =&gt; &lt;a href="mailto:me@domain.com?cc=ccaddress@domain.com&amp;subject=This%20is%20an%20example%20email"&gt;My email&lt;/a&gt;</span>
+</pre>
+
+<p>You can use a block as well if your link target is hard to fit into the
+name parameter. <a href="http://apidock.com/rails/ERB">ERB</a> example:</p>
+
+<pre><span class="punct">&lt;%=</span><span class="string"> mail_to "me@domain.com" do %&gt;
+  &lt;strong&gt;Email me:&lt;/strong&gt; &lt;span&gt;me@domain.com&lt;/span&gt;
+&lt;% end %&gt;
+# </span><span class="punct">=&gt;</span> <span class="punct">&lt;</span><span class="ident">a</span> <span class="ident">href</span><span class="punct">="</span><span class="string">mailto:me@domain.com</span><span class="punct">"&gt;</span>
+       <span class="punct">&lt;</span><span class="ident">strong</span><span class="punct">&gt;</span><span class="constant">Email</span> <span class="ident">me</span><span class="punct">:&lt;/</span><span class="regex">strong&gt; &lt;span&gt;me@domain.com&lt;</span><span class="punct">/</span><span class="ident">span</span><span class="punct">&gt;</span>
+     <span class="punct">&lt;/</span><span class="regex">a&gt;</span></pre>
+
+  </div>
+
+  <div class="sourcecode">
+    <a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to#" id="source_link" onclick="Effect.toggle(&quot;dyn_source&quot;,&#39;blind&#39;,{duration:0.3});
+var source_link = $(&#39;source_link&#39;)
+source_link.update((source_link.innerHTML == &#39;Hide source&#39;)? &#39;Show source&#39;:&#39;Hide source&#39;);; return false;">Show source</a>    
+    <div id="dyn_source" style="display: none;">
+      <pre><span class="comment"># File actionview/lib/action_view/helpers/url_helper.rb, line 456</span>
+      <span class="keyword">def </span><span class="method">mail_to</span><span class="punct">(</span><span class="ident">email_address</span><span class="punct">,</span> <span class="ident">name</span> <span class="punct">=</span> <span class="constant">nil</span><span class="punct">,</span> <span class="ident">html_options</span> <span class="punct">=</span> <span class="punct">{},</span> <span class="punct">&amp;</span><span class="ident">block</span><span class="punct">)</span>
+        <span class="ident">html_options</span><span class="punct">,</span> <span class="ident">name</span> <span class="punct">=</span> <span class="ident">name</span><span class="punct">,</span> <span class="constant">nil</span> <span class="keyword">if</span> <span class="ident">block_given?</span>
+        <span class="ident">html_options</span> <span class="punct">=</span> <span class="punct">(</span><span class="ident">html_options</span> <span class="punct">||</span> <span class="punct">{}).</span><span class="ident">stringify_keys</span>
+
+        <span class="ident">extras</span> <span class="punct">=</span> <span class="punct">%{</span><span class="string"> cc bcc body subject </span><span class="punct">}.</span><span class="ident">map!</span> <span class="punct">{</span> <span class="punct">|</span><span class="ident">item</span><span class="punct">|</span>
+          <span class="ident">option</span> <span class="punct">=</span> <span class="ident">html_options</span><span class="punct">.</span><span class="ident">delete</span><span class="punct">(</span><span class="ident">item</span><span class="punct">)</span> <span class="punct">||</span> <span class="keyword">next</span>
+          <span class="punct">"</span><span class="string"><span class="expr">#{item}</span>=<span class="expr">#{Rack::Utils.escape_path(option)}</span></span><span class="punct">"</span>
+        <span class="punct">}.</span><span class="ident">compact</span>
+        <span class="ident">extras</span> <span class="punct">=</span> <span class="ident">extras</span><span class="punct">.</span><span class="ident">empty?</span> <span class="punct">?</span> <span class="punct">'</span><span class="string"></span><span class="punct">'</span> <span class="punct">:</span> <span class="punct">'</span><span class="string">?</span><span class="punct">'</span> <span class="punct">+</span> <span class="ident">extras</span><span class="punct">.</span><span class="ident">join</span><span class="punct">('</span><span class="string">&amp;</span><span class="punct">')</span>
+
+        <span class="ident">html_options</span><span class="punct">["</span><span class="string">href</span><span class="punct">"]</span> <span class="punct">=</span> <span class="punct">"</span><span class="string">mailto:<span class="expr">#{email_address}#{extras}</span></span><span class="punct">"</span>
+
+        <span class="ident">content_tag</span><span class="punct">(</span><span class="symbol">:a</span><span class="punct">,</span> <span class="ident">name</span> <span class="punct">||</span> <span class="ident">email_address</span><span class="punct">,</span> <span class="ident">html_options</span><span class="punct">,</span> <span class="punct">&amp;</span><span class="ident">block</span><span class="punct">)</span>
+      <span class="keyword">end</span></pre>
+    </div>
+  </div>
+
+</div>
+<div id="notes">
+  
+    <span class="info">
+      <a href="http://apidock.com/register">Register</a> or 
+      <a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to#" onclick="scroll(0,0);
+new Effect.Pulsate(&quot;header_right&quot;,{duration:1, pulses:2});
+$(&quot;login&quot;).activate();; return false;">log in</a>
+      to add new notes.</span>
+  
+  
+  
+<div class="note" id="355-Javascript-encoding-DOES-work-">
+
+  <div class="note_info" id="note_info-355">
+      <div class="info_left">
+    <span class="login"><a href="http://apidock.com/users/Bounga"><img alt="Default_avatar_30" class="gravatar" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/855c677aca7319a44da19fb583b9f320" style="width: 30px; height: 30px;"> Bounga</a> - </span> 
+    January 20, 2009 
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader355" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">5 thanks</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-355">     
+  
+  
+  <h4><a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to#355-Javascript-encoding-DOES-work-">Javascript encoding DOES work!</a></h4>
+
+<p>grosser assertion is false :</p>
+
+<pre><span class="ident"><a href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html">mail_to</a></span><span class="punct">('</span><span class="string">xxx@xxx.com</span><span class="punct">',</span> <span class="constant">nil</span><span class="punct">,</span> <span class="symbol">:encode</span> <span class="punct">=&gt;</span> <span class="symbol">:javascript</span><span class="punct">)</span>
+<span class="comment"># =&gt; "&lt;script type=\"text/javascript\"&gt;eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%78%78%78%40%78%78%78%2e%63%6f%6d%22%3e%78%78%78%40%78%78%78%2e%63%6f%6d%3c%2f%61%3e%27%29%3b'))&lt;/script&gt;"</span>
+</pre>
+
+<p>Use “nil” as the second parameter to tell <a href="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/mail_to (ActionView__Helpers__UrlHelper) - APIdock.html">mail_to</a> that you
+want to use the first parameter for both text and email link</p>
+
+  
+  </div>
+</div>
+<div class="note" id="94-email-to-xxx-xxx-xxx-xxx-encode-javascript-does-NOT-work">
+
+  <div class="note_info" id="note_info-94">
+      <div class="info_left">
+    <span class="login"><a href="http://apidock.com/users/grosser"><img alt="Default_avatar_30" class="gravatar" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/59436ecd4fe6ad7c34f67654d839f05f" style="width: 30px; height: 30px;"> grosser</a> - </span> 
+    August  1, 2008 
+    
+  </div>
+
+  <div class="info_right">
+    <img alt="Loader" class="loader" id="note_loader94" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/loader.gif" style="display: none;">
+    <span class="thank_text">2 thanks</span>
+     
+  </div>  
+
+  </div>
+  
+  <div class="note_content" id="note_content-94">     
+  
+  
+  <h4><a href="http://apidock.com/rails/ActionView/Helpers/UrlHelper/mail_to#94-email-to-xxx-xxx-xxx-xxx-encode-javascript-does-NOT-work">email_to('xxx@xxx','xxx@xxx',:encode=&gt;'javascript') does NOT work</a></h4>
+
+<p>as i always want the email in the link text, email_to does not help me…</p>
+
+<p>so here comes the rescue!</p>
+
+<pre><span class="comment">#http://unixmonkey.net/?p=20</span>
+<span class="comment"># Takes in an email address and (optionally) anchor text,</span>
+<span class="comment"># its purpose is to obfuscate email addresses so spiders and</span>
+<span class="comment"># spammers can't harvest them.</span>
+<span class="keyword">def </span><span class="method">js_antispam_email_link</span><span class="punct">(</span><span class="ident">email</span><span class="punct">,</span> <span class="ident">linktext</span><span class="punct">=</span><span class="ident">email</span><span class="punct">)</span>
+  <span class="ident">user</span><span class="punct">,</span> <span class="ident">domain</span> <span class="punct">=</span> <span class="ident">email</span><span class="punct">.</span><span class="ident">split</span><span class="punct">('</span><span class="string">@</span><span class="punct">')</span>
+  <span class="comment"># if linktext wasn't specified, throw email address builder into js document.write statement</span>
+  <span class="ident">linktext</span> <span class="punct">=</span> <span class="punct">"</span><span class="string">'+'<span class="expr">#{user}</span>'+'@'+'<span class="expr">#{domain}</span>'+'</span><span class="punct">"</span> <span class="keyword">if</span> <span class="ident">linktext</span> <span class="punct">==</span> <span class="ident">email</span> 
+  <span class="ident">out</span> <span class="punct">=</span>  <span class="punct">"</span><span class="string">&lt;noscript&gt;<span class="expr">#{linktext}</span> <span class="expr">#{user}</span>(ät)<span class="expr">#{domain}</span>&lt;/noscript&gt;<span class="escape">\n</span></span><span class="punct">"</span>
+  <span class="ident">out</span> <span class="punct">+=</span> <span class="punct">"</span><span class="string">&lt;script language='javascript'&gt;<span class="escape">\n</span></span><span class="punct">"</span>
+  <span class="ident">out</span> <span class="punct">+=</span> <span class="punct">"</span><span class="string">  &lt;!--<span class="escape">\n</span></span><span class="punct">"</span>
+  <span class="ident">out</span> <span class="punct">+=</span> <span class="punct">"</span><span class="string">    string = '<span class="expr">#{user}</span>'+'@'+''+'<span class="expr">#{domain}</span>';<span class="escape">\n</span></span><span class="punct">"</span>
+  <span class="ident">out</span> <span class="punct">+=</span> <span class="punct">"</span><span class="string">    document.write('&lt;a href='+'m'+'a'+'il'+'to:'+ string +'&gt;<span class="expr">#{linktext}</span>&lt;/a&gt;'); <span class="escape">\n</span></span><span class="punct">"</span>
+  <span class="ident">out</span> <span class="punct">+=</span> <span class="punct">"</span><span class="string">  //--&gt;<span class="escape">\n</span></span><span class="punct">"</span>
+  <span class="ident">out</span> <span class="punct">+=</span> <span class="punct">"</span><span class="string">&lt;/script&gt;<span class="escape">\n</span></span><span class="punct">"</span>
+  <span class="keyword">return</span> <span class="ident">out</span>
+<span class="keyword">end</span></pre>
+
+  
+  </div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+  <div id="footer_left">
+    <ul>
+  <li class="first_tab"><a href="http://apidock.com/">Welcome</a></li>
+  <li><a href="http://apidock.com/register">Register</a></li>
+  <li><a href="http://apidock.com/projects">Projects</a></li>
+  <li><a href="http://apidock.com/faq">Help</a></li>
+  <li><a href="http://apidock.com/about">About</a></li>
+  <li class="external"><a href="http://blog.nodeta.fi/category/apidock/">Blog</a></li>
+</ul>
+
+    <p>
+      <br>
+      APIdock release: IRON STEVE (1.4)<br>
+      If you have any comments, ideas or feedback, feel free to contact us at <script type="text/javascript">eval(decodeURIComponent('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%5c%22%6d%61%69%6c%74%6f%3a%74%65%61%6d%40%61%70%69%64%6f%63%6b%2e%63%6f%6d%5c%22%3e%74%65%61%6d%40%61%70%69%64%6f%63%6b%2e%63%6f%6d%3c%5c%2f%61%3e%27%29%3b'))</script><a href="mailto:team@apidock.com">team@apidock.com</a>
+    </p>
+    <p class="ndt_copyright">
+      <a href="http://blog.nodeta.com/"><img alt="Go to Nodeta blog" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/nodeta_logo.png"></a>
+      APIdock copyright Nodeta Oy 2008-2016
+    </p>
+  </div>
+  <!-- @flowdock -->
+    <div id="footer_flowdock">
+      
+      <a href="http://www.flowdock.com/" title="Flowdock - Team Inbox With Chat"><img alt="Flowdock" src="./mail_to (ActionView__Helpers__UrlHelper) - APIdock_files/flowdock_promo.png"></a>
+      <a href="http://www.flowdock.com/" title="Flowdock - Team Inbox With Chat"><h3>Flowdock - Team Inbox With Chat</h3></a>
+      <p>Flowdock is a collaboration tool for technical teams. Version control, project management, deployments and your group chat in one place.</p>
+    </div>
+  <!-- /@flowdock -->
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2741725-8']);
+  _gaq.push(['_setDomainName', ".apidock.com"]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+  })();
+
+</script>
+
+    </div>
+  	<script type="text/javascript">
+var fieldFocus = true;
+var resultsContainer = $('search_results');
+new SearchField($('nav_search_field'), resultsContainer, $('submit_nav_search'), 3, document.searchKeywords, document.searchData, 'rails', '1.0.0','4.2.1');
+// Position the results container
+var navi = $('navigation');
+resultsContainer.setStyle({
+	top: navi.cumulativeOffset().top + navi.getHeight() + 'px'
+});
+</script>
+
+    <script type="text/javascript">
+var msgs = $$('.flash_message');
+msgs.invoke('hide');
+// Observer for messages
+document.observe('dom:loaded', function() {
+  msgs.each(function(elem) { 
+    new Effect.Appear(elem, {duration: 0.5});
+    elem.observe('click', function(event) {
+      var clicked = event.element();
+      if (clicked.match('img')) {
+        new Effect.Fade(elem, {duration: 0.3});
+        etTimeout(function(){elem.remove();}.bind(elem), 400 );
+      }
+    })
+  });
+});
+</script>
+  
+</body></html>

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+
+  <h1><%= "Pets name: #{@pet.name}" %></h1>
+
+
+
+  <h2><%= "Pets breed: #{@pet.breed}" %></h2>
+
+
+
+  <h3><%= "Pets age: #{@pet.age}" %></h3>
+
+
+<%= link_to 'Edit', edit_pet_path(@pet), class:'btn btn-default' %> |
+<%= link_to 'Back', pets_path , class: 'btn btn-default'%>

@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+
+  <h1><%= "Teachers name: #{@teacher.name}" %></h1>
+
+
+
+  <h3><%= "Teachers age: #{@teacher.age}" %></h3>
+
+
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'Back', teachers_path %>

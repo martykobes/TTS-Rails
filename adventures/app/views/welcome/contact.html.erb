@@ -1,0 +1,29 @@
+<style>
+  body {
+
+    color: <%= @color %>
+  }
+</style>
+<h1 class ="button">Here is how to contact us</h1>
+
+<br />
+<br />
+
+<p class="button">
+
+  Marty's Adventures<br />
+  3000 Awesome Blvd.<br />
+  Anywhere,NC 27645<br />
+  910-555-6534<br />
+  <%= mail_to "me@domain.com" do %>
+  <strong>Email me:</strong> <span>me@domain.com</span>
+<% end %>
+<p class="button">
+  <%= link_to "Blue", contact_path(color: "blue"), class: "btn btn-primary" %>
+  <%= link_to "Red", contact_path(color: "red"), class: "btn btn-danger" %>
+  <%= link_to "Orange", contact_path(color: "orange"), class: "btn btn-warning" %>
+  <%= link_to "Green", contact_path(color: "green"), class: "btn btn-success" %>
+</p>
+
+<br />
+<br />
