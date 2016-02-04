@@ -7,6 +7,7 @@
       <div class= 'panel panel-default'>
         <div class= 'panel-body'>
         <h1><%= student.name %></h1>
+         <%= image_tag student.avatar.url(:medium), class: "img-responsive" %>
         <h2><%= student.grade %></h2>
         <h3><%= student.age %></h3>
         <div class= 'btn-group'>
