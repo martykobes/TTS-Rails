@@ -26,3 +26,6 @@ body {
   background: rgba(242, 176, 240, 0.53);
   font-family: 'Wellfleet', cursive;
 }
+.top {
+  margin-top: 35px;
+}

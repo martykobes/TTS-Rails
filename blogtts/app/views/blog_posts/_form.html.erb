@@ -12,18 +12,16 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :title,class:"form-control", placeholder: "Post Title" %><br>
-    <%= f.text_field :title %>
+    <%= f.label :title, class:"sr-only" %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
   </div>
   <div class="form-group">
-    <%= f.label :author,class:"form-control", placeholder: "Author Name" %><br>
-    <%= f.text_field :author %>
+    <%= f.label :blog_entry, class:"sr-only" %>
+    <%= f.text_area :blog_entry, class: "form-control", placeholder: "Entry", rows: 10 %>
   </div>
-  <div class="form-group">
-    <%= f.label :blog_entry,class:"form-control", :rows => 20, placeholder: "Speak Your Mind" %><br>
-    <%= f.text_area :blog_entry %>
+  <div class="form-group Cant-see-me">
+    <%= f.number_field :user_id, value: current_user.id %>
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

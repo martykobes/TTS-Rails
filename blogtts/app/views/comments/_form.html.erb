@@ -11,12 +11,12 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :author,class:"form-control", placeholder: "Author Name" %><br>
-    <%= f.text_field :author %>
+    <%= f.label :comment_entry, class:"sr-only" %>
+    <%= f.text_area :comment_entry, class: "form-control", placeholder: "Comment", rows: 5 %>
   </div>
-  <div class="form-group">
-    <%= f.label :comment_entry,class:"form-control", :rows => 10, placeholder: "Speak Your Mind" %><br>
-    <%= f.text_area :comment_entry %>
+  <div class="form-group Cant-see-me">
+    <%= f.number_field :blog_post_id, value: @blog_post.id %>
+    <%= f.number_field :user_id, value: current_user.id %>
   </div>
   <div class="form-group Cant-see-me">
     <%= f.number_field :blog_post_id, value: @blog_post.id %>
