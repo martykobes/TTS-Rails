@@ -10,7 +10,7 @@
       <%= link_to blog_post.title, blog_post %>
       </div>
         <div class="panel-body">
-          by <%= blog_post.user.username %><br />
+          by <%= blog_post.user.username%><br />
           <p><%= truncate(blog_post.blog_entry, length: 250) %></p>
 
           <%= link_to "Read more about #{blog_post.title}", blog_post %>
