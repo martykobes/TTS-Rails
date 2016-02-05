@@ -11,9 +11,9 @@
         <h2><%= student.grade %></h2>
         <h3><%= student.age %></h3>
         <div class= 'btn-group'>
-        <%= link_to 'Show', student , class: 'btn btn-primary'%>
-        <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-primary' %>
-        <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
+        <%= link_to 'Show', student , class: 'btn btn-default'%>
+        <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-default' %>
+        <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         </div>
         </div>
       </div>
