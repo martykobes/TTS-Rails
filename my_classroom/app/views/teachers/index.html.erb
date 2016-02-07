@@ -6,9 +6,9 @@
   <div class='col-md-4'>
     <div class='panel panel-default'>
       <div class='panel-body'>
-        <h1><%= teacher.name %></h1>
+        <h1>Name: <%= teacher.name %></h1>
         <%= image_tag teacher.avatar.url(:medium), class: "img-responsive" %>
-        <h3><%= teacher.age %></h3>
+        <h3>Age: <%= teacher.age %></h3>
         <div class='btn-group'>
           <%= link_to 'Show', teacher, class: 'btn btn-default' %>
           <%= link_to 'Edit', edit_teacher_path(teacher), class: 'btn btn-default' %>

@@ -31,3 +31,6 @@
   font-family: 'Lobster Two', cursive;
   color: #7c0e0e;
 }
+li {
+  list-style-type: none;
+}

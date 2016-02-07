@@ -6,10 +6,10 @@
     <div class= 'col-md-4'>
       <div class= 'panel panel-default'>
         <div class= 'panel-body'>
-        <h1><%= student.name %></h1>
+        <h1>Name: <%= student.name %></h1>
          <%= image_tag student.avatar.url(:medium), class: "img-responsive" %>
-        <h2><%= student.grade %></h2>
-        <h3><%= student.age %></h3>
+        <h2>Grade: <%= student.grade %></h2>
+        <h3>Age: <%= student.age %></h3>
         <div class= 'btn-group'>
         <%= link_to 'Show', student , class: 'btn btn-default'%>
         <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-default' %>
