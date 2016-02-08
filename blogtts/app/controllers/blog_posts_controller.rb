@@ -22,6 +22,13 @@ class BlogPostsController < ApplicationController
   def edit
   end
 
+  def your_posts
+  end
+
+  def user_posts
+    @user = User.find(params[:id])
+  end
+
   # POST /blog_posts
   # POST /blog_posts.json
   def create

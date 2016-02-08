@@ -5,8 +5,9 @@
   <%= @blog_post.title %>
   </div>
 <div class="panel-body">
-  <p>by <strong></strong> <%= @blog_post.user.username %></strong><span class="posted-at">Posted at <%= @blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span></p></br>
-<p><%= @blog_post.blog_entry %></p>
+
+  <p>by <strong><%= link_to @blog_post.user.username, user_posts_path(id: @blog_post.user.id) %></strong> <span class="posted-at"><%= @blog_post.created_at.strftime('%m/%d/%Y at %l:%M&p') %></span></p>
+  <p><%= @blog_post.blog_entry %></p>
   </div>
 <p> Posted: <%= time_ago_in_words(@blog_post.created_at) %> ago</p>
 </div>
@@ -25,14 +26,17 @@
   <% @blog_post.comments.each do |comment| %>
     <div class="panel-body">
       <%= time_ago_in_words(comment.created_at) %> ago
-      <p><strong><%= comment.user.username %></strong> said:</p>
+      <p><strong><%= link_to comment.user.username, user_posts_path(id: comment.user.id) %></strong> said:</p>
       <p><%= comment.comment_entry %></p>
       <span class="posted-at"><%= comment.created_at.strftime('%m/%d/%Y at %I:%M%p') %></span>
     </div>
+</div>
+</div>
 
-  <% end %>
-</div>
-<div>
-  <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-  <%= link_to 'Back', blog_posts_path %>
-</div>
+<% if current_user.id == @blog_post.user.id %>
+  <div class="panel panel-footer">
+    <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+    <%= link_to 'Back', blog_posts_path %>
+  </div>
+<% end %>
+<% end %>
