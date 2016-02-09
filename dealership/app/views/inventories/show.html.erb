@@ -1,0 +1,15 @@
+<% if notice != nil %>
+  <p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
+  </p>
+<% end %>
+
+<h1><%= @inventory.make%>, <%= @inventory.model %></h1>
+<%= image_tag @inventory.avatar.url %>
+<h3>$ <%= @inventory.price %></h3>
+<p> <%= @inventory.description %></p>
+
+<div class="btn-group">
+  <%= link_to 'Edit', edit_inventory_path(@inventory), class: "btn btn-default" %>
+  <%= link_to 'Back', inventories_path, class: "btn btn-default" %>
+</div>
