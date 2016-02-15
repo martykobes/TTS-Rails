@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @recipe.name%></h1>
+<%= image_tag @recipe.avatar.url(:medium) %>
+<p><%= @recipe.directions %></p>
+<p>
+  <strong>User:</strong>
+  <%= @recipe.user_id %>
+</p>
+<p>
+  <strong>Comments:</strong>
+  <%= @recipe.comments %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

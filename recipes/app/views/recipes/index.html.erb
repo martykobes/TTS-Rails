@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1>Listing Destinations</h1>
+<div class = "row">
+  <% @recipes.each do |recipe| %>
+      <div class = "col-md-4">
+        <div class = "panel panel-default">
+          <div class = "panel-body">
+          <h2><%= recipe.name%></h2>
+          <%= image_tag destination.avatar.url(:medium), class: "img-responsive" %>
+          <p><%= recipe.direction %></p>
+          <p><%= recipe.user_id %></p>
+          <div class="btn-group">
+        <%= link_to 'Show', destination, class: "btn btn-default" %>
+        <%= link_to 'Edit', edit_destination_path(destination), class: "btn btn-default" %>
+        <%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+
+          </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </div>
+
+
+
+
+<%= link_to 'Create Recipe', new_recipe_path %>
