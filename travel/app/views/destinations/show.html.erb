@@ -2,7 +2,7 @@
 
 
 <h1><%= @destination.city %>, <%= @destination.country %></h1>
-<%= image_tag @destination.avatar.url(:medium) %>
+<%= image_tag @destination.avatar.url(:medium), class: "img-responsive" %>
 <h2><%= @destination.population %></h2>
 <p><%= @destination.description %></p>
 
