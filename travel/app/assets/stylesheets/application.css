@@ -36,3 +36,7 @@ li {
 td, th {
   color: rgb(252, 249, 249)
 }
+#map-canvas, #destination-map {
+  width: 100%;
+  height: 500px;
+}
