@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ body {
+   background-color: rgb(35, 166, 231)!important;
+   font-family: 'Roboto Condensed', sans-serif;
+ }
+ * {
+   box-sizing: border-box;
+ }
+.panel-heading {
+  text-align: center;
+  font-size: 30px;
+}
+
+.btn-dangers:hover {
+   border-top-color: #ca0ef0;
+   background: #ca0ef0;
+   color: #06244f;
+   }
+.btn-dangers:active {
+   border-top-color: #de1f4f;
+   background: #de1f4f;
+   }
+.btn-customs {
+   border-top: 1px solid #b312e8;
+   background: #0ce1f0;
+   background: -webkit-gradient(linear, left top, left bottom, from(#0914e6), to(#0ce1f0));
+   background: -webkit-linear-gradient(top, #0914e6, #0ce1f0);
+   background: -moz-linear-gradient(top, #0914e6, #0ce1f0);
+   background: -ms-linear-gradient(top, #0914e6, #0ce1f0);
+   background: -o-linear-gradient(top, #0914e6, #0ce1f0);
+   padding: 8.0px 15px;
+   -webkit-border-radius: 12px;
+   -moz-border-radius: 12px;
+   border-radius: 12px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #0c0d09;
+   font-size: 10px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.btn-customs:hover {
+   border-top-color: #63c78e;
+   background: #63c78e;
+   color: #06244f;
+   }
+.btn-customs:active {
+   border-top-color: #de1f4f;
+   background: #de1f4f;
+   }
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: left;
+}
+.panel-heading {
+  height: 100px;
+}
+
+.panel-body li {
+  list-style-type: none;
+}
+.cant-see-me {
+  display: none;
+}
+.icon {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    display: inline-block;
+
+}
+.container-fluid {
+  text-align: center;
+}
